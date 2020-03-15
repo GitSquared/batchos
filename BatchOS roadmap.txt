@@ -1,0 +1,31 @@
+A faire :									Difficultée		Prioritée
+-Débugger BPM upgrade								+			1.2
+-4-Process system avec BatBox et Convertisseur win64				+++			1.2
+-Meilleur boot (logo ASCII ?)							++			1.2 ?
+-Version 1 de bedit.exe								+			none
+-Possibilité d'avoir plusieurs comptes						++			none
+-Système IRC-like								>9000			none
+
+En cours :
+
+-Mode fullscreen : Impossible à faire sans modifier le compiler (placements graphiques limités dans la zone de 25*80) <-------- Réglé par l'utilisation de plusieurs fenêtres en 1.2
+
+-4-Process win64 et intégration BatBox
+
+-Se souvenir :
+
+Les programmes BatchOS (.bexe) sont des scripts Batch compilés puis renommés. Ils peuvent utiliser toutes les commandes DOS et avancées,
+mais pas de goto ni de transfert de variable vers le script principal (pour l'instant). Ils recoivent toutes les variables du script
+principal (Sauf rootPass par mesure de sécurité)
+
+Pour programme repo/FTP : Il faut lancer ftp -s:FILENAME ou filename est un script de commandes FTP à exécuter.
+
+FTP BatchOS.run :
+batchos.run
+u80275404-bosclient
+rosebud
+
+Codes d'erreur Batch Package Manager (BPM) :
+BPM-NOLATESTBAT ------------------------------- Le fichier upgrade/latest.bat n'a pas été trouvé après l'exécution du script FTP
+BPM-NOUPGRADEBAT ------------------------------ Le fichier upgrade/%VER%/upgrade.bat n'a pas été trouvé après le script FTP
+BPM-NOBEXE ------------------------------------ Le fichier .bexe du programme à désinstaller n'a pas été trouvé.
